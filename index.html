@@ -62,6 +62,13 @@ function updateCountdown() {
         alert('Please enter a valid time in minutes.');
         return;
     }
+let seconds = minutes * 60;
+
+    countdown = setInterval(() => {
+        const minutesLeft = Math.floor(seconds / 60);
+        const secondsLeft = seconds % 60;
+
+        countdownDisplay.textContent = `${String(minutesLeft).padStart(2, '0')}:${String(secondsLeft).padStart(2, '0')}`;
     </script>
 </body>
 </html>
